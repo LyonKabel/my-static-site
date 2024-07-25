@@ -1,16 +1,37 @@
 ---
+import Layout from '../layouts/Layout.astro';
+interface Props {
+	title: string;
+}
+
+const { title, base } = Astro.props;
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+
+    <head>
+        <link rel="stylesheet" href="../src/style/style.css">
+    </head>
+
+
+    <header>
+        <h1>Welcome to My Full Sail Deployment of Web Applications Project</h1>
+    </header>
+    <nav>
+        <a href="/DEPLOYMENT-OF-WEB-APPLICATIONS-assignment-1/foreignWebDevelopment">Foreign Web Development Jobs</a>
+        <a href="/DEPLOYMENT-OF-WEB-APPLICATIONS-assignment-1/jobsInTech">Other Jobs in Tech</a>
+        <a href="/DEPLOYMENT-OF-WEB-APPLICATIONS-assignment-1/reactNative">React Native</a>
+        <a href="/DEPLOYMENT-OF-WEB-APPLICATIONS-assignment-1/passwordHashing">Password Hashing</a>
+        <a href="/DEPLOYMENT-OF-WEB-APPLICATIONS-assignment-1/advancementsInWebDevelopment">Advancements in Web Development</a>
+    </nav>
+    <div class="container">
+        <h2>Home</h2>
+        <p>Hello world this is my project</p>
+        <p>When you're building apps, APIs are key—they let different parts of your app talk to each other smoothly. To make sure your APIs work well, keep it simple: use straightforward URLs and basic methods like GET and POST for handling data. Make sure your APIs are secure by adding things like login checks and error messages that make sense. For putting your APIs out there, platforms like Heroku make it easy to set up, and Docker makes it easy to move your stuff around. Tools like GitHub Actions help you update everything automatically, so managing your APIs is easier. Getting these basics down helps you create APIs that really connect everything in your app and keep it running smoothly.</p>
+        <img src="https://www.akamai.com/site/en/images/article/2023/how-a-web-api-works.png" alt="API">
+    </div>
+    <footer>
+        <p>&copy; 2024 Full Sail Project</p>
+    </footer>
+</Layout>
